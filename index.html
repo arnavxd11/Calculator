@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Dhasuu Calculator | DEVLEOPER = ARNAV</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/11.11.0/math.js"></script>
+</head>
+<body>
+  <div class="container">
+    <h1>Dhasuu Calculator</h1>
+    <h3>DEVLEOPER = ARNAV</h3>
+
+    <!-- Normal Calculator -->
+    <div class="section">
+      <input id="display" class="display" type="text" placeholder="0" readonly>
+      <div class="buttons">
+        <button onclick="press('7')">7</button>
+        <button onclick="press('8')">8</button>
+        <button onclick="press('9')">/</button>
+        <button onclick="press('/')">÷</button>
+
+        <button onclick="press('4')">4</button>
+        <button onclick="press('5')">5</button>
+        <button onclick="press('6')">6</button>
+        <button onclick="press('*')">×</button>
+
+        <button onclick="press('1')">1</button>
+        <button onclick="press('2')">2</button>
+        <button onclick="press('3')">3</button>
+        <button onclick="press('-')">-</button>
+
+        <button onclick="press('0')">0</button>
+        <button onclick="press('.')">.</button>
+        <button onclick="calculateNormal()">=</button>
+        <button onclick="press('+')">+</button>
+      </div>
+      <button class="clear" onclick="clearDisplay()">Clear</button>
+    </div>
+
+    <!-- Algebra Calculator -->
+    <div class="section">
+      <h2>Algebra Mode</h2>
+      <input id="equation" type="text" placeholder="Enter expression (e.g. 2*x+3*y-z)">
+      <div class="vars">
+        <input id="xVal" type="text" placeholder="x">
+        <input id="yVal" type="text" placeholder="y">
+        <input id="zVal" type="text" placeholder="z">
+      </div>
+      <button onclick="calculateAlgebra()">Solve Equation</button>
+      <p id="result">Result: </p>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
